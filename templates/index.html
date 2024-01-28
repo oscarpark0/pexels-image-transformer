@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generator</title>
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 10px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Generator</h1>
+    <form action="/" method="post">
+        <button type="submit">Generate</button>
+    </form>
+    <div class="gallery">
+        {% for image in images %}
+            <a href="/download/{{ image }}"><img src="{{ image }}" alt="Generated Image"></a>
+        {% endfor %}
+    </div>
+</body>
+</html>
