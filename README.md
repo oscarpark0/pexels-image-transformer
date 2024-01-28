@@ -2,9 +2,9 @@
 
 This repository contains a Python script that interacts with the Pexels API to download images and then applies various transformations to create abstract art. 
 
+![abstract_art_1706373451](https://github.com/oscarpark0/pexels-image-transformer/assets/115663638/eaa1d1a3-1bdc-4bf4-8fdb-b1b335e5c3a4)
 
-![abstract_art_1706405133](https://github.com/oscarpark0/pexels-image-transformer/assets/115663638/1436e32c-cf6f-4d32-814a-673bdc740810)![abstract_art2](https://github.com/oscarpark0/pexels-image-transformer/assets/115663638/9c7b9c9f-8c25-44c0-8ea3-0a1773e2b35f)
-
+![abstract_art_1706405133](https://github.com/oscarpark0/pexels-image-transformer/assets/115663638/1436e32c-cf6f-4d32-814a-673bdc740810)
 
 
 ## Dependencies
