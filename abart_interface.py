@@ -10,7 +10,9 @@ import requests
 
 app = Flask(__name__)
 
-PEXELS_API_KEY = os.getenv('PEXELS_API_KEY')
+PEXELS_API_KEY = 'iKGtdwbmgoR0WFKTxSS7jZFrlAf7kWiJu8NNndBqOLhDEA4EcZBBcHCY'
+
+
 
 # Function to download an image from Pexels
 def download_pexels_image():
@@ -119,6 +121,7 @@ final_image.save(unique_filename)
 print(f'saved as "{unique_filename}".')
 
 # Function to download and transform images
+# Function to download and transform images
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
@@ -126,9 +129,16 @@ def index():
         for i in range(3):
             image = download_pexels_image()
             if image:
-                image.save(f'static/download_{i}.png')  # Save the downloaded image
+                # Ensure the 'static' folder exists
+                if not os.path.exists('static'):
+                    os.makedirs('static')
+
+                # Save the downloaded image
+                image.save(os.path.join('static', f'download_{i}.png'))
+
                 transformed_image = random_transform(image)
-                transformed_image.save(f'static/transformed_{i}.png')  # Save the transformed image
+                # Save the transformed image
+                transformed_image.save(os.path.join('static', f'transformed_{i}.png'))
                 images.append(f'static/transformed_{i}.png')
 
         if len(images) == 3:
