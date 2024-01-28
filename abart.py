@@ -6,7 +6,7 @@ import sys
 import time
 
 # Pexels API key
-PEXELS_API_KEY = 'iKGtdwbmgoR0WFKTxSS7jZFrlAf7kWiJu8NNndBqOLhDEA4EcZBBcHCY'
+PEXELS_API_KEY = PEXELS_API_KEY
 
 # Function to download an image from Pexels
 def download_pexels_image():
