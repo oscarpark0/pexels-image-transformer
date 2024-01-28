@@ -25,8 +25,6 @@ pip install -r requirements.txt
 
 3. Obtain a Pexels API key from [Pexels](https://www.pexels.com/api/).
 
-4. Replace `'iKGtdwbmgoR0WFKTxSS7jZFrlAf7kWiJu8NNndBqOLhDEA4EcZBBcHCY'` in the script with your API key.
-
 ## Usage
 1. Run the script using 
 
